@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Renderer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="login">Login</a></li>
+                <li><a href="#" class="signup">Signup</a></li>
+            </ul>
+        </nav>
+        <h1>Render your 3D models</h1>
+        <button class="upload-btn" onclick="document.getElementById('file-input').click()">Upload Image</button>
+        <input type="file" id="file-input"  style="display: none;">
+        <div id="error-message" class="error-message"></div>
+        <div class="nav-buttons">
+            <button class="model-button active" id="juice" onclick="setActiveButton('juice')">Juice Shop</button>
+            <button class="model-button" id="jet" onclick="setActiveButton('jet')">Jet</button>
+            <button class="model-button" id="iphone" onclick="setActiveButton('iphone')">iPhone</button>
+        </div>
+    </header>
+    <main>
+        <div class="controls">
+            <button id="reset" onclick="reset()">Reset</button>
+            <div id="scale-display">Scale: 1.0</div>
+            <button id="zoom-in" onclick="zoomIn()">+</button>
+            <button id="zoom-out" onclick="zoomOut()">-</button>
+        </div>
+        <div id="image-container">
+            <img id="displayed-image" src="juice-shop.png" alt="Displayed Image">
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 3D Model Renderer. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
